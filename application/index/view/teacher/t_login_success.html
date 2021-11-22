@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="create">点击添加学生成绩</a>
+<a href="allstudent">点击显示所有授课学生成绩</a>
+<a href="allclass">点击显示所有授课</a>
+<a href="not_class">点击显示所有还没有成绩的学生</a>
+{volist name="teacher" id="teacher"}
+        教师登录成功页面<br>
+        欢迎您，{$teacher.tname} {/volist}
+        <table border="1" cellspacing="0" cellpadding="0" class="dataTable">
+
+            <tr>
+                <th class="dataTableHeader">编号</th>
+                <th class="dataTableHeader">考试性质</th>
+                <th class="dataTableHeader">课程号</th>
+                <th class="dataTableHeader">课程名称</th>
+                <th class="dataTableHeader">修习类别</th>
+                <th class="dataTableHeader">上课班级</th>
+                <th class="dataTableHeader">成绩</th>
+                <th class="dataTableHeader">管理</th>
+            </tr>
+
+{volist name="data" id="value"}
+              <tr>
+                <td></td>
+                <td>{$value.state}</td>
+                <td>{$value.cno}</td>
+                <td>{$value.cname}</td>
+                <td>{$value.type}</td>
+            </tr>
+          {/volist}
+
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+</body>
+</html>

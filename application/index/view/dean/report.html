@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellspacing="0" cellpadding="0" class="dataTable">
+    <thead>
+    <tr>
+        <th class="dataTableHeader">开课班级号</th>
+        <th class="dataTableHeader">平均成绩</th>
+        <th class="dataTableHeader">开课班级总人数</th>
+        <th class="dataTableHeader">通过人数</th>
+    </tr>
+    </thead>
+    <tbody>
+    {volist name="data" id="value"}
+        <tr class="odd_row">
+            <td>{$value.cou_classname}</td>
+            <td>{$value.avg_grade}</td>
+            <td>{$value.number}</td>
+            <td>{$value.pass}</td>
+        </tr>
+    {/volist}
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="update_teacher"
+      method="post">
+    <table border="2" width="70%" algin="center">
+        <caption>教师安排页面</caption>
+        <tr>
+            {volist name="data" id="value"}
+            <th>课程号：</th>
+            <td>
+                <input type="text" name="cno" value="{$value.cno}" readonly="true"/></td>
+        </tr>
+
+        <tr>
+            <th>开课班级号：</th><td><input type="text" name="cou_classno" value="{$value.cou_classno}" readonly="true"/></td>
+        </tr>
+        <tr>
+            <th>学期：</th><td><input type="text" name="term" value="{$value.term}" readonly="true"/></td>
+        </tr>
+        <tr>
+            <th>状态：</th><td><input type="text" name="state" value="{$value.state}" readonly="true"/></td>
+        </tr>
+        <tr>
+            <th>教师号：</th><td><input type="text" name="tno" value="{$value.tno}" /></td>
+        </tr>
+        <tr>
+            <th>课程名：</th><td><input type="text" name="cname" value="{$value.cname}" readonly="true"/></td>
+        </tr>
+        <tr>
+            <th>学时：</th><td><input type="text" name="ctime" value="{$value.ctime}" readonly="true"/></td>
+        </tr>
+        <tr>
+            <th>学分：</th><td><input type="text" name="credit" value="{$value.credit}" readonly="true"/></td>
+        </tr>
+        <tr>
+            <th>类型：</th><td><input type="text" name="type" value="{$value.type}" readonly="true"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="确认修改"/></td>
+            {/volist}
+        </tr>
+    </table>
+</form>
+</body>
+</html>

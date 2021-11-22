@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellspacing="0" cellpadding="0" class="dataTable">
+
+    <tr>
+        <th class="dataTableHeader">学号</th>
+        <th class="dataTableHeader">课程号</th>
+        <th class="dataTableHeader">课程名</th>
+        <th class="dataTableHeader">学分</th>
+        <th class="dataTableHeader">类型</th>
+        <th class="dataTableHeader">状态</th>
+        <th class="dataTableHeader">成绩</th>
+    </tr>
+
+    {volist name="data" id="value"}
+    <tr>
+
+        <td>{$value.sno}</td>
+        <td>{$value.cou_classno}</td>
+        <td>{$value.cname}</td>
+        <td>{$value.credit}</td>
+        <td>{$value.type}</td>
+        <td>{$value.state}</td>
+        <td>{$value.grade}</td>
+
+    </tr>
+    {/volist}
+
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</body>
+</html>

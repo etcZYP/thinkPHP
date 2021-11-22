@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellspacing="0" cellpadding="0" class="dataTable">
+
+    <tr>
+
+        <th class="dataTableHeader">期末成绩占比</th>
+        <th class="dataTableHeader">平时成绩占比</th>
+    </tr>
+
+    {volist name="data" id="value"}
+    <tr>
+
+        <td>{$value.usual_grade}</td>
+        <td>{$value.final_grade}</td>
+    </tr>
+    {/volist}
+
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</body>
+</html>
